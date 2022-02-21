@@ -1,20 +1,8 @@
-<h1>New Post</h1>
+<h1> All My Posts </h1>
+ 
+ <ul>
+   <% for post in @posts %>
+   <% end %>
+</ul>
 
-<%= form_with model: @post do |form| %>
-  <p>
-    <%= form.label "author" %>
-    <%= form.text_field "author" %>
-  </p<>
-
-  <p>
-    <%= form.label "body" %>
-    <%= form.text_field "body" %>
-  </p>
-
-  <p>
-    <%= form.label "image" %>
-    <%= form.text_field "image" %>
-  </p>
-
-  <p><%= form.submit %></p>
-<% end %>
+<p><a href="/posts/new">New Post</a></p>

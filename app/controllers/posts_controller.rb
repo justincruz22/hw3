@@ -2,16 +2,21 @@ class PostsController < ApplicationController
     
     def index
         @posts = Post.all
-      end
-    
-      def new
+    end
+
+    def new
         @post = Post.new
-      end
+        @post.place_id = params["place_id"]
+    end
     
-      def create
+    def show
+        @post = Post.find(params["post"])
+    end
+
+    def create
         @post = Post.new(params["post"])
         @post.save
-        redirect_to "/posts"
-      end
+        redirect_to "/places/#{@post.place.id}"
+    end
     
 end

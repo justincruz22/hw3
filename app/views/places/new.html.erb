@@ -2,14 +2,9 @@
 
 <%= form_with model: @place do |form| %>
   <p>
-    <%= form.label "city" %>
-    <%= form.text_field "city" %>
-  </p<>
-
-  <p>
-    <%= form.label "country" %>
-    <%= form.text_field "country" %>
+    <%= form.label "name", "City Name" %>
+    <%= form.text_field "name" %>
   </p>
-
-  <p><%= form.submit %></p>
+  
+  <%= form.submit %>
 <% end %>
