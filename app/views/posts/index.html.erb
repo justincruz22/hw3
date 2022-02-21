@@ -1,8 +1,9 @@
-<h1> All My Posts </h1>
- 
- <ul>
-   <% for post in @posts %>
-   <% end %>
-</ul>
+<h1>All Posts!</h1>
 
-<p><a href="/posts/new">New Post</a></p>
+  <% for post in @posts %>
+    <h2><%= "#{post.title}" %></h2>
+    <h3><%= "#{post.posted_on}" %></h3>
+    <p><%= "#{post.description}" %></p>
+  <% end %>
+
+<p><a href="/places">Back to All Places</a></p>
